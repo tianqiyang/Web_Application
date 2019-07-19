@@ -7,7 +7,7 @@ const app = express();
 
  const itemRoutes = require('./routes/items');
  const indexRoutes = require('./routes/index');
- const commentRoutes = require('./routes/comments')
+ const commentRoutes = require('./routes/comments');
 
 /****************
  * Set ultilities
@@ -27,6 +27,6 @@ app.use('/items/:id/comments', commentRoutes);
  * Start the Server
  ***************************/
 const port = 9000 || process.env.port;
-app.listen(port, ()=> {
+app.listen(port, () => {
     console.log(`Server started on port ${port}`);
 });
